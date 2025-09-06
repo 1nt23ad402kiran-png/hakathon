@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Product - EcoFinds</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h2>Add New Product</h2>
+    <form method="post">
+        <input type="text" name="title" placeholder="Product Title" required><br>
+        <input type="text" name="category" placeholder="Category (or leave blank)" ><br>
+        <textarea name="description" placeholder="Description" required></textarea><br>
+        <input type="number" name="price" placeholder="Price" step="0.01" required><br>
+        <button type="submit">Add Product</button>
+    </form>
+    <p><a href="/dashboard">Back to Dashboard</a></p>
+</body>
+</html>
