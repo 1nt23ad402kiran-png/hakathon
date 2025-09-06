@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - EcoFinds</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>{{ username }}'s Dashboard</h1>
+    <a href="/">🏠 Home</a> | <a href="/add">➕ Add Product</a> | <a href="/logout">🚪 Logout</a>
+
+    <h2>My Products</h2>
+    {% if products %}
+        <ul>
+        {% for p in products %}
+            <li>
+                <b>{{ p[2] }}</b> ({{ p[3] }}) <br>
+                ₹{{ p[5] }} <br>
+                {{ p[4] }} <br>
+                <small>Added on {{ p[6] }}</small>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>You haven’t added any products yet.</p>
+    {% endif %}
+</body>
+</html>
