@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, session
 import sqlite3, datetime, difflib
 
 app = Flask(__name__)
-app.secret_key = "supersecret123"   # session key
+app.secret_key = "supersecret123"   
 
 def init_db():
     conn = sqlite3.connect("ecofinds.db")
